@@ -6,8 +6,8 @@
   "scripts": {
     "build": "npx tsc",
     "export": "npm run build && ./export.sh",
-    "lint": "npx eslint src/ --ext .ts",
-    "start": "npm run build && node ./dist/index.js",
+    "lint": "npx eslint . --ext .ts",
+    "start": "npm run build && cd dist && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

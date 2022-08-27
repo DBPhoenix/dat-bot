@@ -7,20 +7,20 @@ import type { Command, Event } from './src/core/types';
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-const files = glob.sync('dist/src/**/*.[c,e].js');
-console.log(files);
+const files = glob.sync('src/**/*.[c,e].js');
 
 files.forEach((file) => {
   // Is Command file?
   if (file.endsWith('.c.js')) {
+    // eslint-disable-next-line
     const command = require(resolve(file)).default as Command;
-    console.log(command);
 
     commands[command.data.name] = command;
   }
 
   // Is Event file?
   if (file.endsWith('.e.js')) {
+    // eslint-disable-next-line
     const event = require(resolve(file)).default as Event;
 
     if (event.once) {
