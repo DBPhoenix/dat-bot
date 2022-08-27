@@ -1,0 +1,39 @@
+{
+  "name": "dat-bot",
+  "version": "1.0.0",
+  "description": "A discord bot",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "lint": "npx eslint . --ext .ts",
+    "start": "npm run build && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DBPhoenix/dat-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "DAT 7",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/DBPhoenix/dat-bot/issues"
+  },
+  "homepage": "https://github.com/DBPhoenix/dat-bot#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.13",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "discord.js": "^14.3.0"
+  }
+}
