@@ -7,5 +7,5 @@ export default {
     .setDescription('Get development link.'),
   async execute(interaction) {
     await interaction.reply('Join development at https://github.com/DBPhoenix/dat-bot');
-  }
+  },
 } as Command;
