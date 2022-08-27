@@ -2,7 +2,7 @@ import type { CommandInteraction, SlashCommandBuilder } from 'discord.js';
 
 type Command = {
   data: SlashCommandBuilder;
-  execute: (interaction: CommandInteraction) => void;
+  async execute: (interaction: CommandInteraction) => Promise<void>;
 };
 
 type Event = {
