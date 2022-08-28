@@ -9,6 +9,11 @@ export default {
   execute(interaction: BaseInteraction) {
     if (!interaction.isChatInputCommand()) return;
 
-    commands[interaction.commandName].execute(interaction);
+    commands[interaction.commandName]
+      .execute(interaction)
+      .catch((reason) => {
+        // eslint-disable-next-line no-console
+        console.error(reason);
+      });
   },
 } as Event;
