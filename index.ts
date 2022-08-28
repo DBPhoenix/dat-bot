@@ -5,7 +5,12 @@ import { resolve } from 'path';
 import { commands, token } from './src/core/data';
 import type { Command, Event } from './src/core/types';
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+  intents: [
+    GatewayIntentBits.GuildVoiceStates,
+    GatewayIntentBits.Guilds,
+  ],
+});
 
 const files = glob.sync('src/**/*.[c,e].js');
 
